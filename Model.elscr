@@ -1,0 +1,5 @@
+# load sensor config files
+include=Sensors\Sensors.elscr
+
+# resolve sensor externs to hardware pins
+include=Configuration\Wiring.elscr

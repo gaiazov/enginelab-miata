@@ -1,0 +1,6 @@
+# would be nice to use variables here, but unfortunately resolve_externs does not support variables
+# so "COOLANT_TEMPERATURE_SENSOR_IN" is actually a string and not a variable
+{resolve_externs
+    COOLANT_TEMPERATURE_SENSOR_IN -> AN_1_In_Temp [n]
+    AIR_TEMPERATURE_SENSOR_IN     -> AN_2_In_Temp [n]
+}

@@ -1,0 +1,31 @@
+##############################################################################
+# COOLANT TEMPERATURE                                                        #
+##############################################################################
+!import append ".\Thermistor.elcfg" [user_only]
+{resolve_externs
+	Sensor In [n] -> COOLANT_TEMPERATURE_SENSOR_IN
+}
+!change_item "Thermistor [ohms]" [name="Coolant Temperature [ohms]"]
+
+!import append ".\ThermistorMapping.elcfg" [user_only]
+{resolve_externs
+	Temperature In [ohms] -> Coolant Temperature [ohms]
+}
+!change_item "Temperature [C]" [name="Coolant Temperature [C]"]
+
+##############################################################################
+# AIR TEMPERATURE                                                            #
+##############################################################################
+
+!import append ".\Thermistor.elcfg" [user_only]
+{resolve_externs
+	Sensor In [n] -> AIR_TEMPERATURE_SENSOR_IN
+}
+
+!change_item "Thermistor [ohms]" [name="Air Temperature [ohms]"]
+
+!import append ".\ThermistorMapping.elcfg" [user_only]
+{resolve_externs
+	Temperature In [ohms] -> Air Temperature [ohms]
+}
+!change_item "Temperature [C]" [name="Air Temperature [C]"]
